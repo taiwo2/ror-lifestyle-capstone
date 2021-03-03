@@ -7,7 +7,7 @@
             <%= link_to article_path(@featured_article.id) do %>
 
               <div class="image featured-article-image">
-                <%= image_tag(@featured_article.featured_image_url(:full), alt: @featured_article.title)%>
+                <%= image_tag(@featured_article.featured_image_url(:full), alt: @featured_article.title) %>
               </div>
               <div class="cat-title">
                 <h4 class="cat-name"><strong><%= @featured_article.category.name.capitalize %></strong></h4>
@@ -24,7 +24,7 @@
                     <div class="image ripple">
                     </div>
                     <div class="cat-image">
-                      <%= image_tag(sort_array(category.articles).featured_image_url(:full), alt: category.articles.last.title ) %>
+                      <%= image_tag(sort_array(category.articles).featured_image_url(:full), alt: category.articles.last.title) %>
                     </div>
                     <div class="cat-title">
                       <h4 class="cat-name"><strong><%= category.name.capitalize %></strong></h4>
@@ -56,7 +56,7 @@
                         <div class="image ripple">
                         </div>
                         <div class="cat-image card-img-top">
-                          <%= image_tag(article.featured_image_url, alt: article.title ) %>
+                          <%= image_tag(article.featured_image_url, alt: article.title) %>
                         </div>
 
                         <div class="cat-title">
@@ -68,10 +68,10 @@
                         <p><%= string_length(article.text, 80) %></p>
                         <div class="attr">
                           <span class="view">
-                            <%= fa_icon('eye') %> &nbsp; <span class="view-no"><%= article.views %></span>
+                            <%= fa_icon("eye") %> &nbsp; <span class="view-no"><%= article.views %></span>
                           </span>
                           <span class="comment">
-                            <%= fa_icon('comment-alt') %> &nbsp; <span class="view-no"><%= article.comments.count %></span>
+                            <%= fa_icon("comment-alt") %> &nbsp; <span class="view-no"><%= article.comments.count %></span>
                           </span>
                           <span class="min-read">
                             <%= min_read(article.text) %> mins read
@@ -103,7 +103,7 @@
                               <div class="image ripple">
                               </div>
                               <div class="cat-image card-img-top">
-                                <%= image_tag(category_article.featured_image_url, alt: category_article.title ) %>
+                                <%= image_tag(category_article.featured_image_url, alt: category_article.title) %>
                               </div>
 
                               <div class="cat-title">
@@ -115,10 +115,10 @@
                               <p><%= string_length category_article.text, 80 %></p>
                               <div class="attr">
                                 <span class="view">
-                                  <%= fa_icon('eye') %> &nbsp; <span class="view-no"><%= category_article.views %></span>
+                                  <%= fa_icon("eye") %> &nbsp; <span class="view-no"><%= category_article.views %></span>
                                 </span>
                                 <span class="comment">
-                                  <%= fa_icon('comment-alt') %> &nbsp; <span class="view-no"><%= category_article.comments.count %></span>
+                                  <%= fa_icon("comment-alt") %> &nbsp; <span class="view-no"><%= category_article.comments.count %></span>
                                 </span>
                                 <span class="min-read">
                                   <%= min_read(category_article.text) %> mins read
@@ -136,7 +136,7 @@
           </div>
         </div>
 
-        <%= render 'articles/suggested_articles' %>
+        <%= render "articles/suggested_articles" %>
 
       </div>
 
@@ -160,7 +160,7 @@
                                 <div class="image ripple">
                                 </div>
                                 <div class="cat-image editors-pick-img card-img-top">
-                                  <%= image_tag(picks.featured_image_url, alt: picks.title ) %>
+                                  <%= image_tag(picks.featured_image_url, alt: picks.title) %>
                                 </div>
 
                                 <div class="cat-title">

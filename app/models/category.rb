@@ -1,4 +1,5 @@
-class Category < ApplicationRecordbefore_save :downcase_category_name
+class Category < ApplicationRecord
+  before_save :downcase_category_name
   has_many :articles, dependent: :destroy
 
   validates :name, presence: true, length: { in: 2..8 }
