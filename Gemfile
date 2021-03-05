@@ -7,6 +7,8 @@ gem 'aws-sdk-s3', '~> 1.89'
 gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 
 gem 'bootstrap-will_paginate', '~> 1.0'
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sassc-rails', '>= 2.1.0'
 gem 'carrierwave', '~> 2.0'
 gem 'faker', '~> 2.16'
 gem 'fog-aws', '~> 3.9'

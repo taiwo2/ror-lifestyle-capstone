@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap/scss/bootstrap";
+ 
  @import 'font_awesome5_webfont';
  @import "froala_editor.min";
  @import "froala_style.min";
+ @import "bootstrap-sprockets";
+@import "bootstrap";
