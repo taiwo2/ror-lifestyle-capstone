@@ -1,9 +1,14 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, except: %i[new create]
-  before_action :already_logged_in, only: %i[new create]
+  before_action :require_signin, except: %i[new create]
+
+  before_action :require_correct_user, only: %i[edit update]
 
   def index
     @users = User.all
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   def new
@@ -12,40 +17,39 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+
     if @user.save
-      create_session(@user)
-      create_cookies(@user)
-      flash['alert-success'] = 'Welcome to the great Lifestyle platform'
-      redirect_to root_path
+      session[:user_id] = @user.id
+      redirect_to root_path, notice: 'Thanks for successfully signed up!'
     else
       render :new
     end
   end
 
-  def show
-    @user = current_user
-    @articles = @user.articles
-  end
-
-  def edit
-    @user = current_user
-  end
+  def edit; end
 
   def update
-    @user = current_user
     if @user.update(user_params)
-      flash['alert-success'] = 'User updated succesfully'
-      redirect_to profile_path
+      redirect_to @user, notice: 'Account successfully updated!'
     else
       render :edit
     end
   end
 
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to events_url, alert: 'Account successfully deleted'
+  end
+
   private
 
+  def require_correct_user
+    @user = User.find(params[:id])
+    redirect_to root_url unless current_user?(@user)
+  end
+
   def user_params
-    params.required(:user).permit(:name, :username, :email,
-                                  :twitter, :linkedin, :avatar,
-                                  :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password)
   end
 end

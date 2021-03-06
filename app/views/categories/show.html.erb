@@ -1,0 +1,17 @@
+<div class="category-article-list">
+    <% if @articles.length > 0 %>
+        <% @row_count.times do |count| %>
+        
+            <div class="article-row <%= count.even? ? "even" : "odd" %>">
+                <%= render "article_card", article: category_article1(@articles, count), category: @category.name %>
+                <% if category_article2(@articles, count) %>
+                    <%= render "article_card", article: category_article2(@articles, count), category: @category.name %>
+                <% end %>
+            </div>
+        <% end %>
+    <% else %>
+        <h3>Please Add some Articles</h3>
+    <% end %>
+
+</div>
+

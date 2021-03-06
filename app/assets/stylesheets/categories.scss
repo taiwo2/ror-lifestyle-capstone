@@ -1,87 +1,61 @@
-// Place all the styles related to the Categories controller here.
+// Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.main-content.category-articles {
-    // min-width: 1150px;
-    transform: translateY(61px);
-  
-    h1 {
-      padding-top: 3rem;
-      font-family: 'Arial', serif;
-    }
-  
-    .row-1 {
-      padding: 3rem;
-    }
-  
-    .article-cont {
-      height: 250px;
-  
-      img {
-        object-fit: cover;
-        height: 100%;
-      }
-    }
-  
-    .article-item-desc {
-      padding: 1rem 2rem;
-      background: #fff;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-  
-      a {
-        font-size: 1.3rem;
-      }
-  
-      h6 a {
-        color: #eb3108;
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-  
-        a:hover {
-          text-decoration: none;
-        }
-      }
-  
-      p {
-        font-family: 'Arial', serif;
-        font-size: 1.7rem;
-      }
-  
-      i,
-      span {
-        font-size: 1.3rem;
-      }
-    }
+@import '_shared';
+
+.top-article {
+  min-height: 600px;
+  background-size: cover;
+  padding: 20px;
+  color: $white-text;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .title {
+    color: $secondary-color;
   }
-  
-  .main-content.article-page {
-    transform: translateY(80px);
+}
+
+.category-list {
+  display: flex;
+}
+
+.category-box {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  min-height: 270px;
+  min-width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .category-name {
+    color: $white-text;
+    text-decoration: none;
+    border-bottom: 2px solid $tertiary-color;
   }
-  
-  .category-all-articles {
-    .article-contents {
-      width: 50%;
-    }
+
+  .title {
+    color: $white-text;
+    font-size: 18px;
+    font-weight: bold;
   }
-  
-  @media only screen and (max-width: 768px) {
-    .category-all-articles {
-      .article-contents {
-        width: 100%;
-      }
-    }
+}
+
+#votes {
+  a {
+    text-decoration: none;
   }
-  
-  @media only screen and (max-width: 575px) {
-    .category-all-articles {
-      .article-cont {
-        order: 1;
-      }
-    }
-  }
-  
+}
+
+#category_priority {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}

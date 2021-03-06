@@ -1,31 +1,20 @@
 class ApplicationController < ActionController::Base
-  include SessionsHelper
-  before_action :all_cat
-
-  def logged_in_user
-    return if logged_in?
-
-    flash['alert-danger'] = 'You must be logged in to access that page!'
-    redirect_to login_path
+  def current_user
+    User.find(session[:user_id]) if session[:user_id]
   end
 
-  def already_logged_in
-    return unless logged_in?
+  helper_method :current_user
 
-    flash['alert-warning'] = 'You are already logged in!'
-    redirect_to root_path
+  def require_signin
+    return if current_user
+
+    session[:intended_url] = request.url
+    redirect_to signin_path, alert: 'Please signin first !'
   end
 
-  def all_cat
-    @categories = Category.all
+  def current_user?(user)
+    current_user == user
   end
 
-  private
-
-  def authorize
-    return unless current_user.try(:admin) == false
-
-    flash['alert-danger'] = 'You must be logged'
-    redirect_to(request.referer)
-  end
+  helper_method :current_user?
 end

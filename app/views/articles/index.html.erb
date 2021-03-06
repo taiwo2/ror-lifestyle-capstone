@@ -1,0 +1,23 @@
+
+
+
+
+<% if false %>
+<h1>All Articles</h1>
+
+
+<% @articles.each do |article| %>
+    <div>
+        <h3><%= link_to article.title, article %></h3>
+        <%= image(article) %>
+        <p><%= article.text %></p>
+        <small>Created at: <%= article.createdat %></small>
+    
+    </div>
+<% end %>
+
+<% if current_user %>
+    <%= link_to "New Article", new_article_path %>
+<% end %>
+
+<% end %>

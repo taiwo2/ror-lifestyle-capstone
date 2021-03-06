@@ -1,18 +1,29 @@
 class Category < ApplicationRecord
-  before_save :downcase_category_name
-  has_many :articles, dependent: :destroy
+  before_save :set_slug
+  has_many :categorizations, dependent: :destroy
+  has_many :articles, through: :categorizations, dependent: :destroy
 
-  validates :name, presence: true, length: { in: 2..8 }
+  validates :name, :priority, presence: true
+  validates :name, length: { minimum: 5, maximum: 10 }, uniqueness: true
 
-  scope :all_categories, -> { includes(:articles).where(articles: { status: 'published' }) }
+  scope :category_order, -> { Category.order(priority: :asc) }
 
-  def name_with_caps
-    name.capitalize
+  def most_recent_article
+    articles = self.articles.order(created_at: :desc)
+    articles[0]
+  end
+
+  def articles_order
+    articles.order(created_at: :desc)
+  end
+
+  def to_param
+    slug
   end
 
   private
 
-  def downcase_category_name
-    self.name = name.downcase
+  def set_slug
+    self.slug = name.parameterize
   end
 end

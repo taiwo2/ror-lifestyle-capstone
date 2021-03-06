@@ -1,24 +1,19 @@
 class SessionsController < ApplicationController
-  before_action :already_logged_in, except: [:destroy]
   def new; end
 
   def create
-    user = User.find_by(username: params[:session][:username].downcase)
-    if user
-      create_session(user)
-      create_cookies(user)
-      redirect_to root_path
-      flash['alert-success'] = "Right on #{user.name}. Welcome Back!"
+    user = User.find_by(name: params[:name])
+    if user && user.name == params[:name]
+      session[:user_id] = user.id
+      redirect_to root_path, flash: { notice: "Welcome back, #{user.name}!" }
     else
-      flash.now['alert-danger'] = 'You have typed a wrong user name!'
+      flash.now[:alert] = 'No user found, Please enter valid name'
       render :new
     end
   end
 
   def destroy
-    user = current_user
-    log_out if logged_in?
-    redirect_to root_path
-    flash['alert-success'] = "You have successfully logged out #{user.name}!"
+    session[:user_id] = nil
+    redirect_to root_path, notice: 'You are successfully signed out!'
   end
 end
