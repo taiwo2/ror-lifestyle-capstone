@@ -1,4 +1,4 @@
-<nav class="d-flex justify-content-between px-3 align-items-center py-3 header">
+<!--<nav class="d-flex justify-content-between px-3 align-items-center py-3 header">
     <div class="logo">
         <%= link_to "herSTYLE", root_path, class: "navbar-brand" %>
     </div>
@@ -30,11 +30,7 @@
                 </li>
                 <li class="py-1">
                      <%= link_to "Sign Out", session_path, method: :delete %>
-                </li>
-                       
-
-                
-                
+                </li>   
             <% else %>
                 <li class="py-1 mr-3">
                      <%= link_to "Write an Article", new_article_path %>
@@ -44,5 +40,89 @@
             <% end %>
             </ul>
     </div>
-</nav>
+</nav>-->
+<div class="wrapper">
+  <header class="header-nav">
+    <nav class="nav flex-item">
+      <div class="nav-navbar small flex-item">
+      <div class="menu-toggler bars">
+          <div class="start bar"></div>
+          <div class="middle bar"></div>
+          <div class="end bar"></div>
+        </div>
+        <div class="nav-brand">
+          <a href="/">
+            <div class="nav-brand brand-header">
+              <span>LifeOpedia!</span>
+            </div>
+          </a>
+        </div>
+      </div>
+       <div class="navbar-content">
+        <div class="nav-navbar large">
+           <div class="nav-brand">
+            <a href="/">
+              <div class="nav-brand brand-header">
+                <span>LifeOpedia!</span>
+              </div>
+            </a>
+          </div>
+        </div> 
+        <ul class="navbar nav-links">
+          <li class="nav-item">
+            <%= link_to "Home", root_path, class: " nav-link" %>
+          </li>
+           <% all_routes.each do |route| %>
+            <li class="pl-3 py-1 nav-link">
+                <%= route %>
+            </li>
+            <% end %>
+        </ul>
+        <ul class="navbar">
+          <% if current_user %>
+           
+                
+                <li class="nav-item prof">
+                  <%= link_to "Write An Article", new_article_path, class: " nav-link" %>
+                </li>
+               
+                
+                <%= link_to "Logout", session_path, class: "nav-link", method: :delete %>
 
+                  <li class="nav-item prof">
+                    <%= link_to "Create Category", new_category_path, class: "nav-link" %>
+                  </li>
+              </ul>
+            </li>
+          <% else %>
+            <li class="nav-item reg-links">
+              <%= link_to "Login", signin_path, class: "nav-link search-hide" %>
+            </li>
+            <li class="nav-item divider reg-links">
+              <span>|</span>
+            </li>
+            <li class="nav-item reg-links">
+              <%= link_to "Register", signup_path, class: "nav-link search-hide" %>
+            </li>
+              
+          <% end %>
+
+        </ul>
+
+      </div>
+      <div class="nav-item search-contents">
+        <%= form_tag(search_path, method: :get, class: "search-form") do %>
+          <div class="search-form-content">
+            <%= text_field_tag :q, params[:q], class: "form-control search-input", placeholder: "Search" %>
+            <%= button_tag "", :name => nil, class: "btn search-button" do %>
+              <%= fa_icon("search", class: "search-icon") %>
+            <% end %>
+          </div>
+        <% end %>
+        <div class="psuedo-search-button">
+          <%= fa_icon("search", class: "search-icon") %>
+        </div>
+      </div>
+    </nav>
+  </header>
+  </div>

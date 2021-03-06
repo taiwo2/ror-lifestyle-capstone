@@ -2,7 +2,10 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
-
+gem 'fog-aws'
+gem 'font_awesome5_rails'
+gem 'jquery-rails'
+gem 'mini_magick'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.0.rc1'
 # Use postgresql as the database for Active Record
