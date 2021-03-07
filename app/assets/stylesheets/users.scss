@@ -71,10 +71,11 @@
 
   .sign-in.tab.active,
   .sign-up.tab.active {
-    color:#fd6000;
+    color: #fd6000;
     border-color: #fd6000;
   }
   // ##00d1b2;
+
   .login-form {
     height: 100%;
     position: relative;
@@ -100,7 +101,7 @@
       }
 
       .button {
-        background: #fd6000;;
+        background: #fd6000;
         font-size: 1.2rem;
         font-weight: bolder;
       }
