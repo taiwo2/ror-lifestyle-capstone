@@ -2,10 +2,6 @@
 
 > This project is for Ruby on Rails capstone which is, based on a lifestyle articles website. I have followed the given design, and I chose to develop this app for articles on women's lifestyles with 'Ruby on Rails". A new article can be created under one or multiple categories. You can upvote an article. The most voted article will be displayed on the home page's top section.
 
-![Homepage](./app/assets/images/IMac.jpg)
-![tablet](./app/assets/images/tab.jpg)
-![laptop](./app/assets/images/laptop.jpg)
-
 ## Built With
 
 - Ruby v2.7.2
@@ -28,12 +24,6 @@
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.İnitial
-
-### Prerequisites
-
-Ruby: 2.7.2
-Rails: 6.1.0
-Postgres: >=9.5
 
 **Setup**
 
@@ -85,18 +75,6 @@ Type your title and text, add an image, category
 
 ![screenshot](app/assets/images/article.png)
 
-#### Bookmarked articles
-
-Articles can be bookmarked and will be saved in `Your Bookmars`
-
-![screenshot](app/assets/images/follow.png)
-
-#### Edit User Profile
-
-User profile can be edited along with the profile's picture
-
-![screenshot](app/assets/images/cover.png)
-
   ## Automated Test
 
 * Run the command and see the output: 
@@ -105,7 +83,7 @@ User profile can be edited along with the profile's picture
 
 ## Database Structure
  * Database schema used for this project reflects the following structure:
- ![erd](app/assets/images/erd.png)
+ ![erd](app/docs/erd.png)
  
 
 ## Author
