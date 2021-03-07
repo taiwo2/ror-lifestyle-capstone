@@ -1,4 +1,3 @@
-
 .signup-login-forms {
   margin: auto;
   width: 100%;
@@ -8,7 +7,7 @@
   background-size: cover;
   background-attachment: fixed;
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  }
+}
 
 .form-contents {
   width: 100%;
@@ -18,7 +17,7 @@
   display: flex;
   justify-content: space-between;
 }
-  
+
 .login-html,
 .social-media-login {
   flex-basis: 40%;
@@ -26,9 +25,9 @@
 }
 
 .login-html.edit-form {
-width: 100%;
-flex-basis: initial;
-
+  width: 100%;
+  flex-basis: initial;
+}
 
 .login-html {
   .profile-avatar {
@@ -209,7 +208,7 @@ flex-basis: initial;
     background: #aaa;
   }
 }
-  
+
 .social-media-login {
   height: 70%;
 
@@ -272,108 +271,107 @@ flex-basis: initial;
 .twitter,
 .twitter:hover {
   color: #46c0fb;
+}
+
+// Profile Page
+
+.login-html .profile-avatar,
+.display-avatar {
+  width: 200px;
+  height: 200px;
+}
+
+.display-avatar img,
+[class*='profile-img'] {
+  object-position: top;
+}
+
+// Edit Profile Page
+
+.avatar {
+  position: relative;
+  object-position: top;
+
+  .image-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.6rem;
+    background: linear-gradient(to bottom, #f8f9fa, #c1c4c5);
+    margin: 0;
+    font-size: 1.2rem;
+    border-radius: 10px;
   }
-  
-  // Profile Page
-  
-  .login-html .profile-avatar,
-  .display-avatar {
-    width: 200px;
-    height: 200px;
+}
+
+.group input.edit-profile {
+  width: auto !important;
+}
+
+.user-avatar {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .signup-login-forms,
+  .form-contents {
+    height: 100%;
   }
-  
-  .display-avatar img,
-  [class*='profile-img'] {
-    object-position: top;
+
+  .form-contents {
+    flex-direction: column;
+    padding: 12rem 6rem;
   }
-  
-  // Edit Profile Page
-  
-  .avatar {
-    position: relative;
-    object-position: top;
-  
-    .image-label {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      padding: 0.6rem;
-      background: linear-gradient(to bottom, #f8f9fa, #c1c4c5);
-      margin: 0;
-      font-size: 1.2rem;
-      border-radius: 10px;
+
+  .form-contents > * {
+    margin: 2rem 0;
+  }
+
+  .login-html,
+  .social-media-login {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .social-media-header {
+    margin-bottom: 4rem !important;
+  }
+
+  .login-divider {
+    flex-direction: initial;
+    height: 100%;
+    justify-content: space-around;
+    transform: translateY(0);
+
+    .divider-item {
+      text-transform: uppercase;
+    }
+
+    .start-divider,
+    .end-divider {
+      width: 40%;
+      height: 1px;
+      background: #aaa;
     }
   }
-  
-  .group input.edit-profile {
-    width: auto !important;
+
+  .file-input {
+    width: 100%;
+    height: 100%;
   }
-  
-  .user-avatar {
-    visibility: hidden;
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .signup-login-forms,
-    .form-contents {
-      height: 100%;
-    }
-  
-    .form-contents {
-      flex-direction: column;
-      padding: 12rem 6rem;
-    }
-  
-    .form-contents > * {
-      margin: 2rem 0;
-    }
-  
-    .login-html,
-    .social-media-login {
-      flex-basis: 100%;
+}
+
+@media only screen and (max-width: 530px) {
+  .login-html {
+    .profile-avatar,
+    .display-avatar {
+      max-width: 200px;
       width: 100%;
-    }
-  
-    .social-media-header {
-      margin-bottom: 4rem !important;
-    }
-  
-    .login-divider {
-      flex-direction: initial;
-      height: 100%;
-      justify-content: space-around;
-      transform: translateY(0);
-  
-      .divider-item {
-        text-transform: uppercase;
-      }
-  
-      .start-divider,
-      .end-divider {
-        width: 40%;
-        height: 1px;
-        background: #aaa;
-      }
-    }
-  
-    .file-input {
-      width: 100%;
-      height: 100%;
+      height: 200px;
     }
   }
-  
-  @media only screen and (max-width: 530px) {
-    .login-html {
-      .profile-avatar,
-      .display-avatar {
-        max-width: 200px;
-        width: 100%;
-        height: 200px;
-      }
-    }
-  
-    .form-contents {
-      padding: 12rem 3rem;
-    }
+
+  .form-contents {
+    padding: 12rem 3rem;
   }
 }
