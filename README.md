@@ -1,4 +1,4 @@
-# herSTYLE ROR Capstone project
+# LifeSTyle ROR Capstone project
 
 > This project is for Ruby on Rails capstone which is, based on a lifestyle articles website. I have followed the given design, and I chose to develop this app for articles on women's lifestyles with 'Ruby on Rails". A new article can be created under one or multiple categories. You can upvote an article. The most voted article will be displayed on the home page's top section.
 
@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[herSTYLE](https://murmuring-dawn-03579.herokuapp.com/)
+[LifeSTyle](https://infinite-beach-95886.herokuapp.com/)
 
 ## Video Link
 
@@ -112,26 +112,5 @@ Give a ⭐️ if you like this project!
 
 > Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
-- The design utilizes three free fonts. Use the links provided to download them :
-
-  - [Lato font](http://www.fontsquirrel.com/fonts/lato)
-
-  - [Cartogothic standard](http://www.fontex.org/download/Carto-gothic-std.otf)
-
-  - [Chivo](http://www.fontsquirrel.com/fonts/chivo)
-
-- [Social media icons by Picons.me](http://picons.me/)
-
-- Stock images from unsplash
-
-  - [Photo by Unsplash](https://unsplash.com/photos/NpyF7rjqmq4)
-
-  - [Photo by Unsplash](https://unsplash.com/photos/L85a1k-XqH8)
-
-  - [Photo by Unsplash](https://unsplash.com/photos/QgYvORVDdd8)
-
-  - [Photo by Unsplash](https://unsplash.com/photos/vLwH8bWoi_8)
-
-  - [Photo by Unsplash](https://unsplash.com/photos/505eectW54k)
 
 ## 📝 License
