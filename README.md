@@ -9,10 +9,11 @@
 ## Built With
 
 - Ruby v2.7.2
-- Ruby on Rails v5.2.4
+- Ruby on Rails v6.1.0
 - Rspec
 - Capybara
 - rubocop
+- Bootstrap
 - heroku
 
 ## Live Demo
@@ -31,19 +32,19 @@ To get a local copy up and running follow these simple example steps.İnitial
 ### Prerequisites
 
 Ruby: 2.7.2
-Rails: 5.2.3
+Rails: 6.1.0
 Postgres: >=9.5
 
 **Setup**
 
-- Clone this repository with `git@github.com:Amita-Roy/ROR-Capstone-Her_Style.git` using your terminal or command line.<br>
-- Change to the project directory by entering `cd her_style` in the terminal<br>
+- Clone this repository with `https://github.com/taiwo2/ror-lifestyle-capstone.git` using your terminal or command line.<br>
+- Change to the project directory by entering `cd ror-lifestyle-capstone` in the terminal<br>
 - Next run `bundle install` to install the necessary dependencies<br>
 - run rails `active_storage:install`
 - run `rails db:create`
 - Run `rails db:migrate` to setup your local database.<br>
 - Run `rails db:seed` to get seeded data for project.<br>
-- Finally run `rails console` to start the application.<br>
+
 
 ### Usage
 
@@ -66,14 +67,56 @@ Open `http://localhost:3000/` in your browser.
 > To run all the tests run below script in the terminal
 
 `rspec`
+#### Create User
+
+Fill the sign up form to create a user
+
+![screenshot](app/assets/images/register.png)
+
+#### Login
+
+Use only the username to login
+
+![screenshot](app/assets/images/login.png)
+
+#### Create a new article from the dropdown menu
+
+Type your title and text, add an image, category
+
+![screenshot](app/assets/images/article.png)
+
+#### Bookmarked articles
+
+Articles can be bookmarked and will be saved in `Your Bookmars`
+
+![screenshot](app/assets/images/follow.png)
+
+#### Edit User Profile
+
+User profile can be edited along with the profile's picture
+
+![screenshot](app/assets/images/cover.png)
+
+  ## Automated Test
+
+* Run the command and see the output: 
+```$ bundle exec rspec```
+![Rspec](app/assets/images/rspec.png)
+
+## Database Structure
+ * Database schema used for this project reflects the following structure:
+ ![erd](app/assets/images/erd.png)
+ 
 
 ## Author
 
-👤 **Amita Roy**
+👤 **Taiwo Adetona**
 
-- Github: [@Amita](https://github.com/Amita-Roy)
-- Twitter: [@Amita](https://twitter.com/AmitaRoy14)
-- Linkedin: [@Amita](https://www.linkedin.com/in/amita-roy-3b823b68/)
+- Github: [@taiwo2](https://github.com/taiwo2)
+
+- LinkedIn: [Taiwo Adetona](https://www.linkedin.com/in/taiwo-adetona/)
+
+- Twitter: [@TaiwoAdetona4](https://twitter.com/TaiwoAdetona4/)
 
 ## 🤝 Contributing
 
