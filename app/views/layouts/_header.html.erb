@@ -12,7 +12,6 @@
                 <%= route %>
             </li>
             <% end %>
-
             <li class="py-1 ml-3">
                      <%= nav_link_to "New Category", new_category_path %>
             </li>
@@ -53,7 +52,7 @@
         <div class="nav-brand">
           <a href="/">
             <div class="nav-brand brand-header">
-              <span>LifeOpedia!</span>
+              <span>LiFeSTylE*</span>
             </div>
           </a>
         </div>
@@ -80,7 +79,9 @@
         </ul>
         <ul class="navbar">
           <% if current_user %>
-           
+            <li class="nav-item prof">
+                    <%= link_to current_user.name, current_user %>
+                </li>
                 
                 <li class="nav-item prof">
                   <%= link_to "Write An Article", new_article_path, class: " nav-link" %>
