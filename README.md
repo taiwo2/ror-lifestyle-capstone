@@ -18,7 +18,7 @@
 
 ## Video Link
 
-[Loom Presentation](#)
+[Loom Presentation](https://www.loom.com/share/71953a998e114afb95ac9e3efd70aeba)
 
 
 ## Getting Started
@@ -114,3 +114,4 @@ Give a ⭐️ if you like this project!
 
 
 ## 📝 License
+[MIT](https://opensource.org/licenses/MIT) 
