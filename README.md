@@ -19,6 +19,7 @@
 ## Video Link
 
 [Loom Presentation](https://www.loom.com/share/71953a998e114afb95ac9e3efd70aeba)
+[update video](https://www.loom.com/share/f23c770b52e7486592e9c5a0b649cfcf)
 
 
 ## Getting Started
