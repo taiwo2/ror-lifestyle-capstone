@@ -1,5 +1,6 @@
+
 <div class="category-article-list">
-    <% if @articles.length > 0 %>
+     <% if @articles.length > 0 %>
         <% @row_count.times do |count| %>
         
             <div class="article-row <%= count.even? ? "even" : "odd" %>">
@@ -11,7 +12,7 @@
         <% end %>
     <% else %>
         <h3>Please Add some Articles</h3>
-    <% end %>
+    <% end %> 
 
 </div>
 

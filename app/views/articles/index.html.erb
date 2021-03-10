@@ -2,7 +2,7 @@
 
 
 
-<% if false %>
+<%= false %>
 <h1>All Articles</h1>
 
 
@@ -16,8 +16,6 @@
     </div>
 <% end %>
 
-<% if current_user %>
+<%= current_user %>
     <%= link_to "New Article", new_article_path %>
-<% end %>
 
-<% end %>

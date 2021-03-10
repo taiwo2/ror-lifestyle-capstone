@@ -1,9 +1,8 @@
 <div class="static-background">
     <div class="form-container">
         <h2>Update Article Details</h2>
-        <% if @article.author_id == current_user.id %>
+        <%= articledetails(@user) %>
             <%= render "articles/form", article: @article %>
-        <% end %>
     </div>
 
 </div>

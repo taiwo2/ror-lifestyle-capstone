@@ -21,11 +21,11 @@
     </div>
       
 
-    <% if article.new_record? %>
-        <%= f.submit "Create Article", class: "create mt-3" %>
-    <% else %>
+    <%= record(@user) %>
+    <%= f.submit "Create Article", class: "create mt-3" %>
+        <%= notrecord(@user) %>
         <%= f.submit "Update Article", class: "secondary-btn mt-3" %>
-    <% end %>
+    
     
     
 
