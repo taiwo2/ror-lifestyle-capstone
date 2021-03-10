@@ -115,4 +115,6 @@ Give a ⭐️ if you like this project!
 
 
 ## 📝 License
-[MIT](https://opensource.org/licenses/MIT) 
+
+This project is a capstone project. All rights are reserved for Taiwo.
+
