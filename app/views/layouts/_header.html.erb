@@ -29,11 +29,7 @@
           <li class="nav-item">
             <%= link_to "Home", root_path, class: " nav-link" %>
           </li>
-           <% all_routes.each do |route| %>
-            <li class="pl-3 py-1 nav-link">
-                <%= route %>
-            </li>
-            <% end %>
+            <%= render "layouts/route" %>
         </ul>
         <ul class="navbar">
           <% if current_user %>
