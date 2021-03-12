@@ -25,7 +25,7 @@ module CategoriesHelper
     articles[2 * count + 1]
   end
   
-   def displa(articles, row_count, category)
+  def displa(articles, row_count, category)
     if !articles.empty?
       row_count.times do |count|
         content_tag :div, class: 'article-row' do
