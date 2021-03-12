@@ -24,7 +24,7 @@ module CategoriesHelper
   def category_article2(articles, count)
     articles[2 * count + 1]
   end
-  
+
   def displa(articles, row_count, category)
     if !articles.empty?
       row_count.times do |count|
