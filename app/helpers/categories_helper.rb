@@ -24,4 +24,19 @@ module CategoriesHelper
   def category_article2(articles, count)
     articles[2 * count + 1]
   end
+  
+   def displa(articles, row_count, category)
+    if !articles.empty?
+      row_count.times do |count|
+        content_tag :div, class: 'article-row' do
+          render 'article_card', article: category_article1(articles, count), category: category.name
+          if category_article2(articles, count)
+            render 'article_card', article: category_article2(articles, count), category: category.name
+          end
+        end
+      end
+    else
+      content_tag :h3, 'Please add some articles'
+    end
+  end
 end
