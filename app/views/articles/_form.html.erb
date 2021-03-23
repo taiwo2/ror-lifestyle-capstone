@@ -1,0 +1,32 @@
+<%= form_with(model: article, local: true) do |f| %>
+
+    <%= render "shared/errors", object: article %>    
+
+    <div class="form-group mt-3">
+        <%= f.label :title %>   
+        <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div class="form-group mt-3">
+        <%= f.label :text %>
+        <%= f.text_area :text, class: "form-control" %>
+    </div>
+    
+    <div class="form-group mt-3">
+        <%= f.label :image %>
+        <%= f.file_field :image, class: "form-control", direct_upload: true %>
+    </div>
+    <div class="form-group checkboxes mt-3">
+        <%= f.label :categories, class: "form-check-label" %>
+        <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name, class: "form-check-input mr-2") %>
+    </div>
+      
+
+    <%= record(@user) %>
+    <%= f.submit "Create Article", class: "create mt-3" %>
+        <%= notrecord(@user) %>
+        <%= f.submit "Update Article", class: "secondary-btn mt-3" %>
+    
+    
+    
+
+<% end %>

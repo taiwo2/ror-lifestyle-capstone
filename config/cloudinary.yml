@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: tonaz
+  api_key: '263816713873745'
+  api_secret: aIEXwyfTksQKvPD-PN1xbYh4Fd8
+  secure: true
+  cdn_subdomain: true
+production:
+  cloud_name: tonaz
+  api_key: '263816713873745'
+  api_secret: aIEXwyfTksQKvPD-PN1xbYh4Fd8
+  secure: true
+  cdn_subdomain: true
+test:
+  cloud_name: tonaz
+  api_key: '263816713873745'
+  api_secret: aIEXwyfTksQKvPD-PN1xbYh4Fd8
+  secure: true
+  cdn_subdomain: true
